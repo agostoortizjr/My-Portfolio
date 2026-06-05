@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+::selection {
+  background: rgba(0, 194, 168, 0.28);
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.22em] text-secondary dark:text-accent;
+}
+
+.premium-card {
+  @apply rounded-lg border border-primary/10 bg-white/[0.78] shadow-premium backdrop-blur dark:border-white/10 dark:bg-white/[0.06];
+}
+
+.surface-grid {
+  background-image:
+    linear-gradient(rgba(10, 37, 64, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 37, 64, 0.06) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.dark .surface-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+}
+
+.focus-ring {
+  @apply outline-none ring-offset-2 ring-offset-white focus-visible:ring-2 focus-visible:ring-secondary dark:ring-offset-[#061423];
+}
